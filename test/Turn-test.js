@@ -41,9 +41,19 @@ describe('Turn class', () => {
       expect(turn2.currentCard.id).to.equal(2); // test that the object can be read using dot notation
       expect(turn3.currentCard[correctAnswer]).to.equal('true'); // test that the object can be read using bracket notation
     })
+
+    // it('should not start the turn if it is missing a guess', () => { // not sure how to write this test yet...
+    //   let turn4 = new Turn( , card1);
+    //   expect()
+    // })
+
+    // it('should not start the turn if it is missing a card', () => { // not sure how to write this test yet...
+      // let turn5 = new Turn('Anakin Skywalker', );
+      // expect()
+    // })
   })
 
-  describe('A method to ...')
+  // describe('A method to ...')
 
 })
 
