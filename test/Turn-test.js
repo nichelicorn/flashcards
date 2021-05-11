@@ -55,7 +55,7 @@ describe('Turn class', () => {
   })
 
   describe('A method to return the player\'s guess', () => {
-    it.only('should return the user guess', () => {
+    it('should return the user guess', () => {
       expect(turn1.returnGuess()).to.equal('14');
       expect(turn2.returnGuess()).to.equal('Yoda');
       expect(turn3.returnGuess()).to.equal('true');
@@ -63,7 +63,7 @@ describe('Turn class', () => {
   })
 
   describe('A method to return the card in play', () => {
-    it('should return the current card', () => {
+    it.only('should return the current card', () => {
       expect(turn1.returnCard()).to.deep.equal(card1);
       expect(turn2.returnCard()).to.deep.equal(card2);
       expect(turn3.returnCard()).to.deep.equal(card3);
