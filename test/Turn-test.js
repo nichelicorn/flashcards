@@ -4,9 +4,16 @@ const expect = chai.expect;
 const Turn = require('../src/Turn');
 
 describe('Turn class', () => {
+  let turn1, turn2;
+  beforeEach(() => {
+    turn1 = new Turn();
+    turn2 = new Turn();
+  })
 
   describe('Turn class properties', () => {
-
+    it('should store a user guess', () => {
+      expect()
+    })
   })
 
   describe('A method to ...')
