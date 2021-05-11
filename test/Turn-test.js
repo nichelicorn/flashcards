@@ -36,10 +36,11 @@ describe('Turn class', () => {
       expect(turn3.userGuess).to.equal('true');
     })
 
-    it('should store a card in play', () => {
+    it.only('should store a card in play', () => {
       expect(turn1.currentCard).to.deep.equal(card1); // test that it takes in an object
+      console.log('turn1 >>>', turn1);
       expect(turn2.currentCard.id).to.equal(2); // test that the object can be read using dot notation
-      expect(turn3.currentCard[correctAnswer]).to.equal('true'); // test that the object can be read using bracket notation
+      expect(turn3.currentCard['correctAnswer']).to.equal('true'); // test that the object can be read using bracket notation
     })
 
     // it('should not start the turn if it is missing a guess', () => { // not sure how to write this test yet...
