@@ -10,12 +10,12 @@ describe('Card', function() {
     expect(Card).to.be.a('function');
   });
 
-  it.skip('should be an instance of Card', function() {
+  it('should be an instance of Card', function() {
     const card = new Card();
     expect(card).to.be.an.instanceof(Card);
   });
 
-  it.skip('should store an id', () => {
+  it('should store an id', () => {
     const card = new Card(1);
     expect(card.id).to.equal(1);
   })
