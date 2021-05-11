@@ -86,7 +86,7 @@ describe('Turn class', () => {
   })
 
   describe('A method to return feedback to the player', () => {
-    it.only('should return a message if the player\'s guess is correct', () => {
+    it('should return a message if the player\'s guess is correct', () => {
       turn1.evaluateGuess();
       turn3.evaluateGuess();
 

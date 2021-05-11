@@ -24,6 +24,8 @@ class Turn {
   giveFeedback() {
     if (this.guessIsCorrect) {
       return 'You are correct!';
+    } else if (!this.guessIsCorrect) {
+      return 'That was not correct. You can try again in the next round!';
     }
   }
 }
