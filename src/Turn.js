@@ -20,6 +20,12 @@ class Turn {
       this.guessIsCorrect = false;
     }
   }
+
+  giveFeedback() {
+    if (this.guessIsCorrect) {
+      return 'You are correct!';
+    }
+  }
 }
 
 module.exports = Turn;

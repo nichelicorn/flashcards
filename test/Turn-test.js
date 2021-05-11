@@ -78,15 +78,17 @@ describe('Turn class', () => {
       expect(turn3.guessIsCorrect).to.equal(true);
     })
 
-    it.only('should return false if the player\'s guess is not correct', () => {
+    it('should return false if the player\'s guess is not correct', () => {
       turn2.evaluateGuess();
-      console.log('turn2 <>>>', turn2)
+
       expect(turn2.guessIsCorrect).to.equal(false);
     })
   })
 
   describe('A method to return feedback to the player', () => {
-    it('should return a message if the player\'s guess is correct', () => {
+    it.only('should return a message if the player\'s guess is correct', () => {
+      
+
       expect(turn1.giveFeedback()).to.equal('You are correct!');
       expect(turn3.giveFeedback()).to.equal('You are correct!');
     })
