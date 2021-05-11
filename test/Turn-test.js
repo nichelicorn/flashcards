@@ -3,6 +3,16 @@ const expect = chai.expect;
 
 const Turn = require('../src/Turn');
 
+describe('Turn class', () => {
+
+  describe('Turn class properties', () => {
+
+  })
+
+  describe('A method to ...')
+
+})
+
 // Your Turn class should meet the following requirements:
 // Instantiated with two arguments - a string (that represents a user’s guess to the question), and a Card object for the current card in play.
 // returnGuess: method that returns the guess
