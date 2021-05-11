@@ -48,9 +48,9 @@ describe('Turn class', () => {
     // })
 
     // it('should not start the turn if it is missing a card', () => { // not sure how to write this test yet...
-      let turn5 = new Turn('Anakin Skywalker', );
-      expect()
-    })
+    //   let turn5 = new Turn('Anakin Skywalker', );
+    //   expect()
+    // })
   })
 
   describe('A method to return the player\'s guess', () => {
@@ -82,6 +82,12 @@ describe('Turn class', () => {
       turn2.evaluateGuess();
 
       expect(turn2.guess).to.equal(false);
+    })
+  })
+
+  describe('A method to return feedback to the player', () => {
+    it('should return a message if the player\'s guess is correct', () => {
+
     })
   })
 
