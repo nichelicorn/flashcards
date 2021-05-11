@@ -48,17 +48,47 @@ describe('Turn class', () => {
     // })
 
     // it('should not start the turn if it is missing a card', () => { // not sure how to write this test yet...
-      // let turn5 = new Turn('Anakin Skywalker', );
-      // expect()
-    // })
+      let turn5 = new Turn('Anakin Skywalker', );
+      expect()
+    })
   })
 
-  // describe('A method to ...')
+  describe('A method to return the player\'s guess', () => {
+    it('should return the user guess', () => {
+      expect(turn1.returnGuess()).to.equal('14');
+      expect(turn2.returnGuess()).to.equal('Yoda');
+      expect(turn3.returnGuess()).to.equal('true');
+    })
+  })
+
+  describe('A method to return the card in play', () => {
+    it('should return the current card', () => {
+      expect(turn1.returnCard()).to.deep.equal(card1);
+      expect(turn2.returnCard()).to.deep.equal(card2);
+      expect(turn3.returnCard()).to.deep.equal(card3);
+    })
+  })
+
+  describe('A method to evaluate the player\'s guess', () => {
+    it('should return true if the player\'s guess is correct', () => {
+      turn1.evaluateGuess();
+      turn3.evaluateGuess();
+
+      expect(turn1.guessIsCorrect).to.equal(true);
+      expect(turn3.guessIsCorrect).to.equal(true);
+    })
+
+    it('should return false if the player\'s guess is not correct', () => {
+      turn2.evaluateGuess();
+
+      expect(turn2.guess).to.equal(false);
+    })
+  })
 
 })
 
 // Your Turn class should meet the following requirements:
-// Instantiated with two arguments - √ a string (that represents a user’s guess to the question), and a Card object for the current card in play.
+// Instantiated with two arguments - √ a string (that represents a user’s guess to the question), and a √ Card object for the current card in play.
 // returnGuess: method that returns the guess
 // returnCard: method that returns the Card
 // evaluateGuess: method that returns a boolean indicating if the user’s guess matches the correct answer on the card
