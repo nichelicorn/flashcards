@@ -70,19 +70,18 @@ describe('Turn class', () => {
   })
 
   describe('A method to evaluate the player\'s guess', () => {
-    it.only('should return true if the player\'s guess is correct', () => {
+    it('should return true if the player\'s guess is correct', () => {
       turn1.evaluateGuess();
-      console.log('turn1 >>>', turn1);
       turn3.evaluateGuess();
 
       expect(turn1.guessIsCorrect).to.equal(true);
       expect(turn3.guessIsCorrect).to.equal(true);
     })
 
-    it('should return false if the player\'s guess is not correct', () => {
+    it.only('should return false if the player\'s guess is not correct', () => {
       turn2.evaluateGuess();
-
-      expect(turn2.guess).to.equal(false);
+      console.log('turn2 <>>>', turn2)
+      expect(turn2.guessIsCorrect).to.equal(false);
     })
   })
 
