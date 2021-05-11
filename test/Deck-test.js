@@ -3,7 +3,9 @@ const expect = chai.expect;
 
 const Deck = require('../src/Deck');
 
-
+describe('Deck class', () => {
+  
+})
 
 // constructor
 // Your Deck class should be initialized with an array of Card objects and
