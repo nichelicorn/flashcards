@@ -87,15 +87,19 @@ describe('Turn class', () => {
 
   describe('A method to return feedback to the player', () => {
     it('should return a message if the player\'s guess is correct', () => {
-      turn1.
+      expect(turn1.giveFeedback()).to.equal('You are correct!');
+      expect(turn3.giveFeedback()).to.equal('You are correct!');
+    })
+
+    it('should return a different message if the player\'s guess is not correct', () => {
+      expect(turn2.giveFeedback()).to.equal('That was not correct. You can try again in the next round!');
     })
   })
-
 })
 
 // Your Turn class should meet the following requirements:
 // Instantiated with two arguments - √ a string (that represents a user’s guess to the question), and a √ Card object for the current card in play.
-// returnGuess: method that returns the guess
-// returnCard: method that returns the Card
-// evaluateGuess: method that returns a boolean indicating if the user’s guess matches the correct answer on the card
-// giveFeedback - method that returns either ‘incorrect!’ or ‘correct!’ based on whether the guess is correct or not.
+// √ returnGuess: method that returns the guess
+// √ returnCard: method that returns the Card
+// √ evaluateGuess: method that returns a boolean indicating if the user’s guess matches the correct answer on the card
+// √ giveFeedback - method that returns either ‘incorrect!’ or ‘correct!’ based on whether the guess is correct or not.
