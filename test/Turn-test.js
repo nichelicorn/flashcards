@@ -38,7 +38,6 @@ describe('Turn class', () => {
 
     it('should store a card in play', () => {
       expect(turn1.currentCard).to.deep.equal(card1); // test that it takes in an object
-      console.log('turn1 >>>', turn1);
       expect(turn2.currentCard.id).to.equal(2); // test that the object can be read using dot notation
       expect(turn3.currentCard['correctAnswer']).to.equal('true'); // test that the object can be read using bracket notation
     })
@@ -63,7 +62,7 @@ describe('Turn class', () => {
   })
 
   describe('A method to return the card in play', () => {
-    it.only('should return the current card', () => {
+    it('should return the current card', () => {
       expect(turn1.returnCard()).to.deep.equal(card1);
       expect(turn2.returnCard()).to.deep.equal(card2);
       expect(turn3.returnCard()).to.deep.equal(card3);
@@ -71,8 +70,9 @@ describe('Turn class', () => {
   })
 
   describe('A method to evaluate the player\'s guess', () => {
-    it('should return true if the player\'s guess is correct', () => {
+    it.only('should return true if the player\'s guess is correct', () => {
       turn1.evaluateGuess();
+      console.log('turn1 >>>', turn1);
       turn3.evaluateGuess();
 
       expect(turn1.guessIsCorrect).to.equal(true);
