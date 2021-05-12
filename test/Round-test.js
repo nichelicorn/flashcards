@@ -76,13 +76,13 @@ describe('Round class', () => {
       // expect(round.takeTurn(17)).to.be.an.instanceof(Turn);
     })
 
-    it.only('should update the turn counter', () => {
+    it('should update the turn counter', () => {
       round.takeTurn();
 
       expect(round.turnCount).to.equal(1);
     })
 
-    it.skip('should update the turn counter regardless of a correct answer', () => {
+    it('should update the turn counter regardless of a correct answer', () => {
       round.takeTurn();
       round.takeTurn();
       round.takeTurn();
@@ -90,7 +90,7 @@ describe('Round class', () => {
       expect(round.turnCount).to.equal(3);
     })
 
-    it.skip('should return the next card in the deck', () => {
+    it('should return the next card in the deck', () => {
       round.takeTurn();
       round.takeTurn();
 

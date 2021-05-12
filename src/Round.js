@@ -10,7 +10,7 @@ class Round {
   }
 
   returnCurrentCard() {
-    return this.deckInPlay.cards[0];
+    return this.deckInPlay.cards[this.turnCount];
   }
 
   takeTurn(guess) {
