@@ -24,6 +24,12 @@ class Round {
     return currentTurn.giveFeedback();
     // console.log('evaluate <>>>', currentTurn);
   }
+
+  calculateScore() {
+    let turnsNum = this.turnCount;
+    let deckLength = this.deckInPlay.countCards();
+    console.log(deckLength - turnsNum);
+  }
 }
 
 module.exports = Round;

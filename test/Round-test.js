@@ -63,7 +63,6 @@ describe('Round class', () => {
     })
 
     it('should return the current card', () => { // return Turn.currentCard
-      console.log("round <>>> ", round);
       expect(round.returnCurrentCard()).to.deep.equal(card1);
     })
   })
