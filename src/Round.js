@@ -16,9 +16,12 @@ class Round {
   takeTurn(guess) {
     let currentTurn = new Turn(guess, this.returnCurrentCard());
     this.turnCount++;
-    // console.log('currentTurn <>>>', currentTurn);
     currentTurn.evaluateGuess();
-    console.log('evaluate <>>>', currentTurn);
+    // console.log('currentTurn <>>>', currentTurn);
+    if(!currentTurn.guessIsCorrect) {
+      this.incorrectGuesses.push(currentTurn.currentCard.id);
+    }
+    // console.log('evaluate <>>>', currentTurn);
   }
 }
 

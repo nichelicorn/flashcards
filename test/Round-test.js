@@ -103,9 +103,9 @@ describe('Round class', () => {
       expect(round.incorrectGuesses).to.deep.equal([]);
     })
 
-    it.skip('should store the id of incorrect answers', () => {
-      round.takeTurn();
-      round.takeTurn();
+    it('should store the id of incorrect answers', () => {
+      round.takeTurn('14');
+      round.takeTurn('Yoda');
 
       expect(round.incorrectGuesses).to.deep.equal([2]);
     })
