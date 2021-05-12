@@ -49,6 +49,7 @@ describe('Round class', () => {
     })
 
     it.skip('should keep track of progress in the round', () => {
+      expect(round.isOver).to.equal(false);
     })
   })
 
@@ -108,7 +109,6 @@ describe('Round class', () => {
 
       expect(round.takeTurn()).to.equal('That was not correct. You can try again in the next round!');
     })
-
   })
 
   describe('A method to calculate the game score', () => {
@@ -129,13 +129,24 @@ describe('Round class', () => {
   })
 
   describe('A method to alert a player when the game is over', () => { // describes Round.endRound
+    it.skip('should end the round when all cards have been played', () => {
+      round.takeTurn();
+      round.takeTurn();
+      round.takeTurn();
+      round.calculatePercentCorrect();
+
+      expect(round.isOver).to.equal(true);
+    })
+
     it.skip('should return a message with the percentage of correct answers', () => {
       round.takeTurn();
       round.takeTurn();
       expect(round.takeTurn()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
-    // })
+      // })
+    })
   })
-})
+});
+
 
 // Your Round class should meet the following requirements:
 
