@@ -26,11 +26,12 @@ class Round {
   }
 
   calculateScore() {
-    let turnsNum = this.turnCount;
+    // let turnsNum = this.turnCount;
     let deckLength = this.deckInPlay.countCards();
     let numIncorrect = this.incorrectGuesses.length;
     let numCorrect = deckLength - numIncorrect;
-    console.log('pctg', numCorrect / deckLength);
+    this.percentCorrect = Math.ceil((numCorrect / deckLength) * 100);
+    return this.percentCorrect;
   }
 }
 
