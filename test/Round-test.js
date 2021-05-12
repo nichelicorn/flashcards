@@ -34,6 +34,24 @@ describe('Round class', () => {
     turn3 = new Turn('true', card3);
     round = new Round();
   })
+
+  describe('Round class properties', () => {
+    it.skip('should count the number of turns taken', () => {
+      // write testing for this condition when testing Round.takeTurn
+    })
+  })
+
+  describe('A method to return the current card in play', () => {
+    it.skip('should return the current card', () => {
+      expect(round.returnCurrentCard()).to.deep.equal(card1);
+    })
+
+    it.skip('should return the first card in the deck at the start of the round', () => {
+      expect(round.returnCurrentCard()).to.deep.equal(card1);
+    })
+  })
+
+  
 })
 
 // Your Round class should meet the following requirements:
