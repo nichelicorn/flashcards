@@ -81,6 +81,13 @@ describe('Round class', () => {
       expect(round.takeTurn()).to.equal(true);
     })
 
+    it.skip('should store the id of incorrect answers', () => {
+      round.takeTurn();
+      round.takeTurn();
+
+      expect(round.incorrectGuesses).to.deep.equal([2]);
+    })
+
     it.skip('should tell the player if their answer is correct', () => { // invoke Turn.giveFeedback
       expect(round.takeTurn()).to.equal('You are correct!');
     })
@@ -91,7 +98,11 @@ describe('Round class', () => {
       expect(round.takeTurn()).to.equal('That was not correct. You can try again in the next round!');
     })
 
-
+    it.skip('should return a message with the percentage of correct answers', () => {
+      round.takeTurn();
+      round.takeTurn();
+      expect(round.takeTurn()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
+    })
   })
 })
 
