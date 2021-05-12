@@ -44,11 +44,11 @@ describe('Round class', () => {
       expect(round.incorrectGuesses).to.deep.equal([]);
     })
 
-    it.only('should store the percentage of correct answers', () => {
+    it('should store the percentage of correct answers', () => {
       expect(round.percentCorrect).to.equal(0);
     })
 
-    it.skip('should keep track of progress in the round', () => {
+    it.only('should keep track of progress in the round', () => {
       expect(round.isOver).to.equal(false);
     })
   })

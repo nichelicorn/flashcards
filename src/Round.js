@@ -3,6 +3,7 @@ class Round {
     this.turnCount = 0;
     this.incorrectGuesses = [];
     this.percentCorrect = 0;
+    this.isOver = false;
   }
 }
 
