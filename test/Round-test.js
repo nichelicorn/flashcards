@@ -37,7 +37,7 @@ describe('Round class', () => {
 
   describe('Round class properties', () => { // describes Round.constructor
     it.skip('should count the number of turns taken', () => {
-      // write testing for this condition when testing Round.takeTurn
+      expect(round.turnCount).to.equal(0);
     })
   })
 
@@ -91,7 +91,7 @@ describe('Round class', () => {
       expect(round.takeTurn()).to.equal('That was not correct. You can try again in the next round!');
     })
 
-    
+
   })
 })
 
