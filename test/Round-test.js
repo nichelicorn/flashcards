@@ -39,6 +39,10 @@ describe('Round class', () => {
     it.skip('should count the number of turns taken', () => {
       expect(round.turnCount).to.equal(0);
     })
+
+    it.skip('should have an array to store incorrect answers', () => {
+      expect(round.incorrectGuesses).to.deep.equal([]);
+    })
   })
 
   describe('A method to return the current card in play', () => { // describes Round.returnCurrentCard
