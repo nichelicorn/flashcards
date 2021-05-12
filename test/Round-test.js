@@ -35,13 +35,13 @@ describe('Round class', () => {
     round = new Round();
   })
 
-  describe('Round class properties', () => {
+  describe('Round class properties', () => { // describes Round.constructor
     it.skip('should count the number of turns taken', () => {
       // write testing for this condition when testing Round.takeTurn
     })
   })
 
-  describe('A method to return the current card in play', () => {
+  describe('A method to return the current card in play', () => { // describes Round.returnCurrentCard
     it.skip('should return the current card', () => {
       expect(round.returnCurrentCard()).to.deep.equal(card1);
     })
@@ -51,7 +51,26 @@ describe('Round class', () => {
     })
   })
 
-  
+  describe('A method to record the steps for each turn', () => { // describes Round.takeTurn
+    it.skip('should create a new Turn instance', () => {
+      expect(round.takeTurn()).to.create.an.instanceof(Turn);
+    })
+
+    it.skip('should update the turn counter', () => {
+      round.takeTurn();
+
+      expect(round.turnCount).to.equal(1);
+    })
+
+    it.skip('should update the turn counter regardless of a correct answer', () => {
+      round.takeTurn();
+      round.takeTurn();
+      round.takeTurn();
+
+      expect(round.turnCount).to.equal(3);
+    })
+  })
+
 })
 
 // Your Round class should meet the following requirements:
