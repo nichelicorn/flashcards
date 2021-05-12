@@ -58,19 +58,22 @@ describe('Round class', () => {
   })
 
   describe('A method to return the current card in play', () => { // describes Round.returnCurrentCard
-    it.only('should return the first card in the deck at the start of the round', () => {
+    it('should return the first card in the deck at the start of the round', () => {
       expect(round.returnCurrentCard()).to.deep.equal(card1);
     })
 
-    it.skip('should return the current card', () => { // return Turn.currentCard
+    it('should return the current card', () => { // return Turn.currentCard
       console.log("round <>>> ", round);
       expect(round.returnCurrentCard()).to.deep.equal(card1);
     })
   })
 
   describe('A method to record the steps for each turn', () => { // describes Round.takeTurn
-    it.skip('should create a new Turn instance', () => {
-      expect(round.takeTurn()).to.create.an.instanceof(Turn);
+    it.only('should create a new Turn instance', () => {
+      round.takeTurn(17);
+
+      expect(turn1).to.be.an.instanceof(Turn);
+      // expect(round.takeTurn(17)).to.be.an.instanceof(Turn);
     })
 
     it.skip('should update the turn counter', () => {
