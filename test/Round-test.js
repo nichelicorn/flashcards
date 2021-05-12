@@ -113,6 +113,7 @@ describe('Round class', () => {
       round.takeTurn();
       round.takeTurn();
       round.takeTurn();
+      round.calculatePercentCorrect();
 
       expect(round.percentCorrect).to.equal(67);
     })
