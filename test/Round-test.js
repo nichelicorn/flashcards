@@ -36,11 +36,11 @@ describe('Round class', () => {
   })
 
   describe('Round class properties', () => { // describes Round.constructor
-    it.only('should count the number of turns taken', () => {
+    it('should count the number of turns taken', () => {
       expect(round.turnCount).to.equal(0);
     })
 
-    it.skip('should have an array to store incorrect answers', () => {
+    it.only('should have an array to store incorrect answers', () => {
       expect(round.incorrectGuesses).to.deep.equal([]);
     })
 
