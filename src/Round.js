@@ -28,7 +28,9 @@ class Round {
   calculateScore() {
     let turnsNum = this.turnCount;
     let deckLength = this.deckInPlay.countCards();
-    console.log(deckLength - turnsNum);
+    let numIncorrect = this.incorrectGuesses.length;
+    let numCorrect = deckLength - numIncorrect;
+    console.log('pctg', numCorrect / deckLength);
   }
 }
 
