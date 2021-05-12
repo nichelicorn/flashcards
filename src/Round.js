@@ -16,6 +16,9 @@ class Round {
   takeTurn(guess) {
     let currentTurn = new Turn(guess, this.returnCurrentCard());
     this.turnCount++;
+    // console.log('currentTurn <>>>', currentTurn);
+    currentTurn.evaluateGuess();
+    console.log('evaluate <>>>', currentTurn); // not updating the property this.guessIsCorrect
   }
 }
 

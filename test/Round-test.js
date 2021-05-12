@@ -70,35 +70,35 @@ describe('Round class', () => {
 
   describe('A method to record the steps for each turn', () => { // describes Round.takeTurn
     it('should create a new Turn instance', () => {
-      round.takeTurn(17);
+      round.takeTurn('14');
 
       expect(turn1).to.be.an.instanceof(Turn);
       // expect(round.takeTurn(17)).to.be.an.instanceof(Turn);
     })
 
     it('should update the turn counter', () => {
-      round.takeTurn();
+      round.takeTurn('14');
 
       expect(round.turnCount).to.equal(1);
     })
 
     it('should update the turn counter regardless of a correct answer', () => {
-      round.takeTurn();
-      round.takeTurn();
-      round.takeTurn();
+      round.takeTurn('14');
+      round.takeTurn('Yoda');
+      round.takeTurn('true');
 
       expect(round.turnCount).to.equal(3);
     })
 
     it('should return the next card in the deck', () => {
-      round.takeTurn();
-      round.takeTurn();
+      round.takeTurn('14');
+      round.takeTurn('Yoda');
 
       expect(round.returnCurrentCard()).to.deep.equal(card3);
     })
 
-    it.skip('should evaluate each answer', () => { // invoke Turn.evaluateGuess
-      expect(round.takeTurn()).to.equal(true);
+    it('should evaluate each answer', () => { // invoke Turn.evaluateGuess
+      expect(round.takeTurn('14')).to.equal(true);
     })
 
     it.skip('should store the id of incorrect answers', () => {
