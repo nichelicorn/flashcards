@@ -32,10 +32,14 @@ describe('Round class', () => {
     turn1 = new Turn('14', card1);
     turn2 = new Turn('Yoda', card2);
     turn3 = new Turn('true', card3);
-    round = new Round();
+    round = new Round(deck);
   })
 
   describe('Round class properties', () => { // describes Round.constructor
+    it('should take in a deck of cards to play with', () => {
+      expect(round.deckInPlay).to.deep.equal(deck);
+    })
+
     it('should count the number of turns taken', () => {
       expect(round.turnCount).to.equal(0);
     })
@@ -48,13 +52,13 @@ describe('Round class', () => {
       expect(round.percentCorrect).to.equal(0);
     })
 
-    it.only('should keep track of progress in the round', () => {
+    it('should keep track of progress in the round', () => {
       expect(round.isOver).to.equal(false);
     })
   })
 
   describe('A method to return the current card in play', () => { // describes Round.returnCurrentCard
-    it.skip('should return the current card', () => {
+    it.skip('should return the current card', () => { // return Turn.currentCard
       expect(round.returnCurrentCard()).to.deep.equal(card1);
     })
 

@@ -1,9 +1,14 @@
 class Round {
-  constructor() {
+  constructor(deck) {
+    this.deckInPlay = deck;
     this.turnCount = 0;
     this.incorrectGuesses = [];
     this.percentCorrect = 0;
     this.isOver = false;
+  }
+
+  returnCurrentCard() {
+
   }
 }
 
