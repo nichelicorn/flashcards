@@ -8,7 +8,7 @@ class Round {
   }
 
   returnCurrentCard() {
-
+    return this.deckInPlay.cards[0];
   }
 }
 

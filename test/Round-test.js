@@ -58,11 +58,12 @@ describe('Round class', () => {
   })
 
   describe('A method to return the current card in play', () => { // describes Round.returnCurrentCard
-    it.skip('should return the current card', () => { // return Turn.currentCard
+    it.only('should return the first card in the deck at the start of the round', () => {
       expect(round.returnCurrentCard()).to.deep.equal(card1);
     })
 
-    it.skip('should return the first card in the deck at the start of the round', () => {
+    it.skip('should return the current card', () => { // return Turn.currentCard
+      console.log("round <>>> ", round);
       expect(round.returnCurrentCard()).to.deep.equal(card1);
     })
   })
