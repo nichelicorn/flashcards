@@ -69,14 +69,14 @@ describe('Round class', () => {
   })
 
   describe('A method to record the steps for each turn', () => { // describes Round.takeTurn
-    it.only('should create a new Turn instance', () => {
+    it('should create a new Turn instance', () => {
       round.takeTurn(17);
 
       expect(turn1).to.be.an.instanceof(Turn);
       // expect(round.takeTurn(17)).to.be.an.instanceof(Turn);
     })
 
-    it.skip('should update the turn counter', () => {
+    it.only('should update the turn counter', () => {
       round.takeTurn();
 
       expect(round.turnCount).to.equal(1);
