@@ -1,6 +1,6 @@
 class Round {
   constructor() {
-
+    this.turnCount = 0;
   }
 }
 
