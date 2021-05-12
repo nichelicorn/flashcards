@@ -1,3 +1,11 @@
+const chai = require('Chai');
+const expect = chai.expect;
+
+const Card = require('../src/Card');
+const Deck = require('../src/Deck');
+const Turn = require('../src/Turn');
+const Round = require('../src/Round');
+
 // Round
 //
 // Your Round class will be the object that:
