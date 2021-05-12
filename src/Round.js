@@ -2,6 +2,7 @@ class Round {
   constructor() {
     this.turnCount = 0;
     this.incorrectGuesses = [];
+    this.percentCorrect = 0;
   }
 }
 

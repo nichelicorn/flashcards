@@ -40,11 +40,11 @@ describe('Round class', () => {
       expect(round.turnCount).to.equal(0);
     })
 
-    it.only('should have an array to store incorrect answers', () => {
+    it('should have an array to store incorrect answers', () => {
       expect(round.incorrectGuesses).to.deep.equal([]);
     })
 
-    it.skip('should store the percentage of correct answers', () => {
+    it.only('should store the percentage of correct answers', () => {
       expect(round.percentCorrect).to.equal(0);
     })
 
