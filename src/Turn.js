@@ -23,7 +23,6 @@ class Turn {
   }
 
   giveFeedback() {
-    console.log('the outcome of the evaluation', this.guessIsCorrect)
     if (this.guessIsCorrect) {
       return 'You are correct!';
     } else if (!this.guessIsCorrect) {

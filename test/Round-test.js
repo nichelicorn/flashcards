@@ -71,9 +71,7 @@ describe('Round class', () => {
   describe('A method to record the steps for each turn', () => { // describes Round.takeTurn
     it('should create a new Turn instance', () => {
       round.takeTurn('14');
-
       expect(turn1).to.be.an.instanceof(Turn);
-      // expect(round.takeTurn(17)).to.be.an.instanceof(Turn);
     })
 
     it('should update the turn counter', () => {
@@ -111,11 +109,11 @@ describe('Round class', () => {
     })
 
     it('should tell the player if their answer is correct', () => { // invoke Turn.giveFeedback
-      
+
       expect(round.takeTurn('14')).to.equal('You are correct!');
     })
 
-    it.skip('should tell the player if their answer is incorrect', () => {
+    it('should tell the player if their answer is incorrect', () => {
       round.takeTurn('14');
 
       expect(round.takeTurn('Yoda')).to.equal('That was not correct. You can try again in the next round!');
@@ -124,16 +122,16 @@ describe('Round class', () => {
 
   describe('A method to calculate the game score', () => {
     // it.skip('should return an error if the method runs before game play begins', () => { // not sure how to write a test for this yet ... more research will be needed 🕵️‍♀️
-    //   round.calculatePercentCorrect();
+    //   round.calculateScore();
     //
     //   expect(an error to be thrown in the terminal)
     // })
 
-    it.skip('should calculate the percentage of correct answers', () => {
+    it('should calculate the percentage of correct answers', () => {
       round.takeTurn('14');
       round.takeTurn('Yoda');
       round.takeTurn('true');
-      round.calculatePercentCorrect();
+      round.calculateScore();
 
       expect(round.percentCorrect).to.equal(67);
     })
@@ -144,7 +142,7 @@ describe('Round class', () => {
       round.takeTurn('14');
       round.takeTurn('Yoda');
       round.takeTurn('true');
-      round.calculatePercentCorrect();
+      round.calculateScore();
 
       expect(round.isOver).to.equal(true);
     })
@@ -178,7 +176,7 @@ describe('Round class', () => {
   // Incorrect guesses will be stored (via the id) in an array of incorrectGuesses
   // Feedback is returned regarding whether the guess is incorrect or correct
 
-// calculatePercentCorrect:
+// calculateScore:
   // method that calculates and returns the percentage of correct guesses
 
 // endRound:
