@@ -18,7 +18,7 @@ class Round {
     this.turnCount++;
     // console.log('currentTurn <>>>', currentTurn);
     currentTurn.evaluateGuess();
-    console.log('evaluate <>>>', currentTurn); // not updating the property this.guessIsCorrect
+    console.log('evaluate <>>>', currentTurn);
   }
 }
 

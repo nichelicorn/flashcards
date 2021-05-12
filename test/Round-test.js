@@ -98,7 +98,9 @@ describe('Round class', () => {
     })
 
     it('should evaluate each answer', () => { // invoke Turn.evaluateGuess
-      expect(round.takeTurn('14')).to.equal(true);
+      round.takeTurn('14');
+
+      expect(round.incorrectGuesses).to.deep.equal([]);
     })
 
     it.skip('should store the id of incorrect answers', () => {
