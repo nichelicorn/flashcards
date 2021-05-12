@@ -44,8 +44,11 @@ describe('Round class', () => {
       expect(round.incorrectGuesses).to.deep.equal([]);
     })
 
+    it.skip('should store the percentage of correct answers', () => {
+      expect(round.percentCorrect).to.equal(0);
+    })
+
     it.skip('should keep track of progress in the round', () => {
-      // expect()
     })
   })
 
@@ -109,6 +112,12 @@ describe('Round class', () => {
   })
 
   describe('A method to calculate the game score', () => {
+    // it.skip('should return an error if the method runs before game play begins', () => { // not sure how to write a test for this yet ... more research will be needed 🕵️‍♀️
+    //   round.calculatePercentCorrect();
+    //
+    //   expect(an error to be thrown in the terminal)
+    // })
+
     it.skip('should calculate the percentage of correct answers', () => {
       round.takeTurn();
       round.takeTurn();
@@ -124,7 +133,7 @@ describe('Round class', () => {
       round.takeTurn();
       round.takeTurn();
       expect(round.takeTurn()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
-    })
+    // })
   })
 })
 
