@@ -36,13 +36,6 @@ describe('Round class', () => {
   })
 })
 
-// Round
-//
-// Your Round class will be the object that:
-  // takes in responses
-  // records these guesses
-  // (as well as if they are correct or incorrect).
-
 // Your Round class should meet the following requirements:
 
 // returnCurrentCard:
