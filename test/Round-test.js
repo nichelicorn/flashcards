@@ -109,7 +109,7 @@ describe('Round class', () => {
   })
 
   describe('A method to calculate the game score', () => {
-    it('should calculate the percentage of correct answers', () => {
+    it.skip('should calculate the percentage of correct answers', () => {
       round.takeTurn();
       round.takeTurn();
       round.takeTurn();
