@@ -69,8 +69,30 @@ describe('Round class', () => {
 
       expect(round.turnCount).to.equal(3);
     })
-  })
 
+    it.skip('should return the next card in the deck', () => {
+      round.takeTurn();
+      round.takeTurn();
+
+      expect(round.returnCurrentCard()).to.deep.equal(card3);
+    })
+
+    it.skip('should evaluate each answer', () => { // invoke Turn.evaluateGuess
+      expect(round.takeTurn()).to.equal(true);
+    })
+
+    it.skip('should tell the player if their answer is correct', () => { // invoke Turn.giveFeedback
+      expect(round.takeTurn()).to.equal('You are correct!');
+    })
+
+    it.skip('should tell the player if their answer is incorrect', () => {
+      round.takeTurn();
+
+      expect(round.takeTurn()).to.equal('That was not correct. You can try again in the next round!');
+    })
+
+    
+  })
 })
 
 // Your Round class should meet the following requirements:
