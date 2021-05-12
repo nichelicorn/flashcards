@@ -43,6 +43,10 @@ describe('Round class', () => {
     it.skip('should have an array to store incorrect answers', () => {
       expect(round.incorrectGuesses).to.deep.equal([]);
     })
+
+    it.skip('should keep track of progress in the round', () => {
+      // expect()
+    })
   })
 
   describe('A method to return the current card in play', () => { // describes Round.returnCurrentCard
@@ -102,6 +106,19 @@ describe('Round class', () => {
       expect(round.takeTurn()).to.equal('That was not correct. You can try again in the next round!');
     })
 
+  })
+
+  describe('A method to calculate the game score', () => {
+    it('should calculate the percentage of correct answers', () => {
+      round.takeTurn();
+      round.takeTurn();
+      round.takeTurn();
+
+      expect(round.percentCorrect).to.equal(67);
+    })
+  })
+
+  describe('A method to alert a player when the game is over', () => { // describes Round.endRound
     it.skip('should return a message with the percentage of correct answers', () => {
       round.takeTurn();
       round.takeTurn();
