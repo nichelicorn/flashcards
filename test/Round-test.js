@@ -110,14 +110,15 @@ describe('Round class', () => {
       expect(round.incorrectGuesses).to.deep.equal([2]);
     })
 
-    it.skip('should tell the player if their answer is correct', () => { // invoke Turn.giveFeedback
-      expect(round.takeTurn()).to.equal('You are correct!');
+    it('should tell the player if their answer is correct', () => { // invoke Turn.giveFeedback
+      
+      expect(round.takeTurn('14')).to.equal('You are correct!');
     })
 
     it.skip('should tell the player if their answer is incorrect', () => {
-      round.takeTurn();
+      round.takeTurn('14');
 
-      expect(round.takeTurn()).to.equal('That was not correct. You can try again in the next round!');
+      expect(round.takeTurn('Yoda')).to.equal('That was not correct. You can try again in the next round!');
     })
   })
 
@@ -129,9 +130,9 @@ describe('Round class', () => {
     // })
 
     it.skip('should calculate the percentage of correct answers', () => {
-      round.takeTurn();
-      round.takeTurn();
-      round.takeTurn();
+      round.takeTurn('14');
+      round.takeTurn('Yoda');
+      round.takeTurn('true');
       round.calculatePercentCorrect();
 
       expect(round.percentCorrect).to.equal(67);
@@ -140,17 +141,18 @@ describe('Round class', () => {
 
   describe('A method to alert a player when the game is over', () => { // describes Round.endRound
     it.skip('should end the round when all cards have been played', () => {
-      round.takeTurn();
-      round.takeTurn();
-      round.takeTurn();
+      round.takeTurn('14');
+      round.takeTurn('Yoda');
+      round.takeTurn('true');
       round.calculatePercentCorrect();
 
       expect(round.isOver).to.equal(true);
     })
 
     it.skip('should return a message with the percentage of correct answers', () => {
-      round.takeTurn();
-      round.takeTurn();
+      round.takeTurn('14');
+      round.takeTurn('Yoda');
+      round.takeTurn('true');
       expect(round.takeTurn()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
       // })
     })

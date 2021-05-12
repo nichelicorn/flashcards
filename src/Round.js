@@ -21,6 +21,7 @@ class Round {
     if(!currentTurn.guessIsCorrect) {
       this.incorrectGuesses.push(currentTurn.currentCard.id);
     }
+    return currentTurn.giveFeedback();
     // console.log('evaluate <>>>', currentTurn);
   }
 }
