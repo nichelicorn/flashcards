@@ -120,13 +120,7 @@ describe('Round class', () => {
   })
 
   describe('A method to calculate the game score', () => {
-    // it.skip('should return an error if the method runs before game play begins', () => { // not sure how to write a test for this yet ... more research will be needed 🕵️‍♀️
-    //   round.calculateScore();
-    //
-    //   expect(an error to be thrown in the terminal)
-    // })
-
-    it('should calculate the percentage of correct answers', () => {
+    it('should calculate the percentage of correct answers', () => { // describes Round.calculateScore
       round.takeTurn('14');
       round.takeTurn('Yoda');
       round.takeTurn('true');
