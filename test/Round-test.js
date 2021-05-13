@@ -115,7 +115,7 @@ describe('Round class', () => {
     it('should tell the player if their answer is incorrect', () => {
       round.takeTurn('14');
 
-      expect(round.takeTurn('Yoda')).to.equal('That was not correct. You can try again in the next round!');
+      expect(round.takeTurn('Yoda')).to.equal('not correct. 🌚 You can try again in the next round!');
     })
   })
 

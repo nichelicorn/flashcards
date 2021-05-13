@@ -95,7 +95,7 @@ describe('Turn class', () => {
     })
 
     it('should return a different message if the player\'s guess is not correct', () => {
-      expect(turn2.giveFeedback()).to.equal('That was not correct. You can try again in the next round!');
+      expect(turn2.giveFeedback()).to.equal('not correct. 🌚 You can try again in the next round!');
     })
   })
 })
