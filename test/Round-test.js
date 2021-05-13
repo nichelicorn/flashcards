@@ -62,7 +62,7 @@ describe('Round class', () => {
       expect(round.returnCurrentCard()).to.deep.equal(card1);
     })
 
-    it('should return the current card', () => { // return Turn.currentCard
+    it('should return the current card', () => { // invoke Turn.currentCard
       expect(round.returnCurrentCard()).to.deep.equal(card1);
     })
   })
@@ -155,33 +155,7 @@ describe('Round class', () => {
       round.takeTurn('true');
       round.calculateScore();
 
-      expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
-      // })
+      expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!');
     })
   })
 });
-
-
-// Your Round class should meet the following requirements:
-
-// returnCurrentCard:
-  // method that returns the current card being played
-  // The currentCard should be the first Card in the Deck (the array of Cards) at the start of the Round
-
-// takeTurn: method that
-  // updates turns count
-  // evaluates guesses
-  // gives feedback
-  // stores ids of incorrect guesses
-  // When a guess is made, a new Turn instance is created.
-  // The turns count is updated, regardless of whether the guess is correct or incorrect
-  // The next card becomes current card
-  // Guess is evaluated/recorded.
-  // Incorrect guesses will be stored (via the id) in an array of incorrectGuesses
-  // Feedback is returned regarding whether the guess is incorrect or correct
-
-// calculateScore:
-  // method that calculates and returns the percentage of correct guesses
-
-// endRound:
-  // method that prints the following to the console: ‘** Round over! ** You answered <>% of the questions correctly!’
