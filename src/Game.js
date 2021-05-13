@@ -1,6 +1,7 @@
 const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
+const Round = require('./Round');
 
 class Game {
   constructor() {
@@ -8,7 +9,8 @@ class Game {
   }
 
   start() {
-
+    // console.log('prototypeQuestions', prototypeQuestions); // an array of objects
+    this.currentRound = new Round(prototypeQuestions);
   }
 
   printMessage(deck, round) {

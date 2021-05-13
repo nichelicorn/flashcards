@@ -47,10 +47,10 @@ describe('Game class', () => {
       expect(game.start).to.be.a('function');
     })
 
-    it.skip('should keep track of the current round', () => {
+    it('should keep track of the current round', () => {
       game.start();
 
-      expect(game.currentRound).to.deep.equal(round);
+      expect(game.currentRound).to.be.an('object');
     })
 
     it.skip('should create Cards for the deck', () => {
