@@ -5,7 +5,6 @@ const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const Game = require('../src/Game');
 const Round = require('../src/Round');
-const Turn = require('../src/Turn');
 
 describe('Game class', () => {
   let card1, card2, card3, deck, round, game;
@@ -34,6 +33,10 @@ describe('Game class', () => {
     game = new Game();
   })
 
+  it('should have a class structure', () => {
+    expect(Game).to.be.a('function');
+  })
+
   it('should instantiate a new Game', () => {
     expect(game).to.be.an.instanceof(Game);
   })
@@ -47,10 +50,10 @@ describe('Game class', () => {
       expect(game.start).to.be.a('function');
     })
 
-    it.skip('should create Cards for the deck', () => {
+    it('should create Cards for the deck', () => {
       game.start()
-      console.log(game.currentRound.deckInPlay.cards[0])
-      expect(game.currentRound.deckInPlay[0]).to.be.an.instanceof(Card);
+
+      expect(game.currentRound.deckInPlay.cards[0]).to.be.an.instanceof(Card);
     })
 
     it('should put Cards in the Deck', () => {
@@ -64,8 +67,5 @@ describe('Game class', () => {
 
       expect(game.currentRound).to.be.an.instanceof(Round);
     })
-
-
   })
-
 })
