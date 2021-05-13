@@ -2,6 +2,8 @@ const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
 const Round = require('./Round');
+const Card = require('./Card');
+const Deck = require('./Deck');
 
 class Game {
   constructor() {
@@ -10,7 +12,21 @@ class Game {
 
   start() {
     // console.log('prototypeQuestions', prototypeQuestions); // an array of objects
-    this.currentRound = new Round(prototypeQuestions);
+    // iterate through the array prototypeQuestions and extract each object
+    // instantiate a new Card with each object from the prototypeQuestions array
+    // instantiate new Deck using card array
+    const cards = prototypeQuestions.map(question => {
+      // console.log('question', question);
+      const card = new Card(question.id, question.question, question.answers, question.correctAnswer);
+      // console.log(card);
+      return card;
+    });
+    const deck = new Deck(cards);
+    // console.log(deck);
+    this.currentRound = new Round(deck);
+    // instantiate new Round using the new Deck
+    // console.log('currentRound', this.currentRound)
+
   }
 
   printMessage(deck, round) {

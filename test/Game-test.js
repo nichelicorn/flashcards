@@ -47,9 +47,9 @@ describe('Game class', () => {
       expect(game.start).to.be.a('function');
     })
 
-    it.skip('should create Cards for the deck', () => {
+    it('should create Cards for the deck', () => {
       game.start()
-
+      console.log(game.currentRound.deckInPlay.cards[0])
       expect(game.currentRound.deckInPlay[0]).to.be.an.instanceof(Card);
     })
 
