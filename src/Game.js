@@ -1,9 +1,9 @@
 const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
-const Round = require('./Round');
 const Card = require('./Card');
 const Deck = require('./Deck');
+const Round = require('./Round');
 
 class Game {
   constructor() {
@@ -15,9 +15,11 @@ class Game {
       const card = new Card(question.id, question.question, question.answers, question.correctAnswer);
       return card;
     });
+    // console.log('cards <>>>', cards);
     const deck = new Deck(cards);
     this.currentRound = new Round(deck);
     this.printMessage(deck, this.currentRound);
+    this.printQuestion(this.currentRound);
   }
 
   printMessage(deck, round) {
