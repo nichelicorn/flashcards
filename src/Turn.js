@@ -19,6 +19,7 @@ class Turn {
     } else {
       this.guessIsCorrect = false;
     }
+    // console.log('the guess is :', this.guessIsCorrect);
   }
 
   giveFeedback() {
