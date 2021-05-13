@@ -33,13 +33,14 @@ class Round {
   }
 
   endRound() {
-    let deckLength = this.deckInPlay.countCards();
-    let turnsNum = this.turnCount;
-    let cardsToPlay = deckLength - turnsNum;
-    if (!cardsToPlay) {
-      this.isOver = true;
-    }
-    return `** Round over! ** You answered ${this.calculateScore()}% of the questions correctly!`
+    console.log(`** Round over! ** You answered ${this.calculateScore()}% of the questions correctly!`);
+    // let deckLength = this.deckInPlay.countCards();
+    // let turnsNum = this.turnCount;
+    // let cardsToPlay = deckLength - turnsNum;
+    // if (!cardsToPlay) {
+    //   this.isOver = true;
+    // }
+    // return `** Round over! ** You answered ${this.calculateScore()}% of the questions correctly!`
   }
 }
 
