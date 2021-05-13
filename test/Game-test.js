@@ -67,5 +67,11 @@ describe('Game class', () => {
 
       expect(game.currentRound).to.be.an.instanceof(Round);
     })
+
+    it('should take in a Deck as an argument', () => {
+      game.start();
+
+      expect(game.currentRound.deckInPlay).to.be.an.instanceof(Deck);
+    })
   })
 })
