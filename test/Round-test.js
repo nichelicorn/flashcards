@@ -149,11 +149,13 @@ describe('Round class', () => {
       expect(round.isOver).to.equal(false);
     })
 
-    it.skip('should return a message with the percentage of correct answers', () => {
+    it('should return a message with the percentage of correct answers', () => {
       round.takeTurn('14');
       round.takeTurn('Yoda');
       round.takeTurn('true');
-      expect(round.takeTurn()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
+      round.calculateScore();
+
+      expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
       // })
     })
   })
