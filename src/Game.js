@@ -15,7 +15,6 @@ class Game {
       const card = new Card(question.id, question.question, question.answers, question.correctAnswer);
       return card;
     });
-    // console.log('cards <>>>', cards);
     const deck = new Deck(cards);
     this.currentRound = new Round(deck);
     this.printMessage(deck, this.currentRound);
