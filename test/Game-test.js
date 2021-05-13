@@ -38,6 +38,9 @@ describe('Game class', () => {
     expect(game).to.be.an.instanceof(Game);
   })
 
+  it('should keep track of the current Round', () => {
+    expect(game.currentRound).to.deep.equal({});
+  })
 
   describe('A method to start the game', () => { // describes Game.start
     it('should have a method to start the game', () => {
