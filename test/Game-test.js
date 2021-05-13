@@ -34,21 +34,25 @@ describe('Game class', () => {
     game = new Game();
   })
 
-  it.skip('should instantiate a new Game', () => {
+  it('should instantiate a new Game', () => {
     expect(game).to.be.an.instanceof(Game);
   })
 
 
   describe('A method to start the game', () => { // describes Game.start
-    it.skip('should have a method to start the game', () => {
+    it('should have a method to start the game', () => {
       expect(game.start).to.be.a('function');
     })
 
     it.skip('should keep track of the current round', () => {
+      game.start();
+
       expect(game.currentRound).to.deep.equal(round);
     })
 
     it.skip('should create Cards for the deck', () => {
+      game.start();
+
       expect(game.currentRound.deckInPlay).to.deep.equal(deck);
     })
 
