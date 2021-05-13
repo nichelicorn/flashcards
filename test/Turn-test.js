@@ -90,8 +90,8 @@ describe('Turn class', () => {
       turn1.evaluateGuess();
       turn3.evaluateGuess();
 
-      expect(turn1.giveFeedback()).to.equal('You are correct!');
-      expect(turn3.giveFeedback()).to.equal('You are correct!');
+      expect(turn1.giveFeedback()).to.equal('correct!');
+      expect(turn3.giveFeedback()).to.equal('correct!');
     })
 
     it('should return a different message if the player\'s guess is not correct', () => {

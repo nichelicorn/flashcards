@@ -109,7 +109,7 @@ describe('Round class', () => {
 
     it('should tell the player if their answer is correct', () => { // invoke Turn.giveFeedback
 
-      expect(round.takeTurn('14')).to.equal('You are correct!');
+      expect(round.takeTurn('14')).to.equal('correct!');
     })
 
     it('should tell the player if their answer is incorrect', () => {
