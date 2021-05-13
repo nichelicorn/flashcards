@@ -7,7 +7,7 @@ const Game = require('../src/Game');
 const Round = require('../src/Round');
 
 describe('Game class', () => {
-  let card1, card2, card3, deck, round, game;
+  let card1, card2, card3, game;
 
   beforeEach(() => {
     card1 = {
@@ -28,8 +28,6 @@ describe('Game class', () => {
       "answers": ["true", "false"],
       "correctAnswer": "true"
     };
-    deck = new Deck([card1, card2, card3]);
-    round = new Round(deck);
     game = new Game();
   })
 
