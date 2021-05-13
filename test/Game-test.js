@@ -47,19 +47,19 @@ describe('Game class', () => {
       expect(game.start).to.be.a('function');
     })
 
-    it('should create Cards for the deck', () => {
+    it.skip('should create Cards for the deck', () => {
       game.start()
       console.log(game.currentRound.deckInPlay.cards[0])
       expect(game.currentRound.deckInPlay[0]).to.be.an.instanceof(Card);
     })
 
-    it.skip('should put Cards in the Deck', () => {
+    it('should put Cards in the Deck', () => {
       game.start();
 
       expect(game.currentRound.deckInPlay).to.be.an.instanceof(Deck);
     })
 
-    it.skip('should start a new Round', () => {
+    it('should start a new Round', () => {
       game.start();
 
       expect(game.currentRound).to.be.an.instanceof(Round);
