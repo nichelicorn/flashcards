@@ -14,9 +14,10 @@ class Round {
   }
 
   takeTurn(guess) {
-    let currentCard = this.returnCurrentCard();
-    let currentTurn = new Turn(guess, currentCard);
-    console.log(currentCard);
+    // let currentCard = this.returnCurrentCard();
+    // let currentTurn = new Turn(guess, currentCard);
+    // console.log(currentCard);
+    let currentTurn = new Turn(guess, this.returnCurrentCard());
     this.turnCount++;
     currentTurn.evaluateGuess();
     if(!currentTurn.guessIsCorrect) {
