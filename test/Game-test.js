@@ -73,5 +73,15 @@ describe('Game class', () => {
 
       expect(game.currentRound.deckInPlay).to.be.an.instanceof(Deck);
     })
+
+    it.skip('should invoke the method printMessage', () => {
+      // 🚨 DO NOT TEST `printMessage` or `printQuestion` - these are outside the scope of this project
+      // expect(game.start()).to.equal(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+// -----------------------------------------------------------------------`)
+    })
+
+    it.skip('should invoke the method printQuestion', () => {
+      // 🚨 DO NOT TEST `printMessage` or `printQuestion` - these are outside the scope of this project
+    })
   })
 })
