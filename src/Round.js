@@ -40,6 +40,7 @@ class Round {
     if (!cardsToPlay) {
       this.isOver = true;
     }
+    return `** Round over! ** You answered ${this.calculateScore()}% of the questions correctly!`
   }
 }
 
