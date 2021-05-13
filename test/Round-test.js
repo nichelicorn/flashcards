@@ -141,6 +141,14 @@ describe('Round class', () => {
       expect(round.isOver).to.equal(true);
     })
 
+    it('should only end the round if all the cards have been played', () => {
+      round.takeTurn('14');
+      round.takeTurn('Yoda');
+      round.endRound();
+
+      expect(round.isOver).to.equal(false);
+    })
+
     it.skip('should return a message with the percentage of correct answers', () => {
       round.takeTurn('14');
       round.takeTurn('Yoda');

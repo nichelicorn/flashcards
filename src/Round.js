@@ -26,7 +26,6 @@ class Round {
   }
 
   calculateScore() {
-    // let turnsNum = this.turnCount;
     let deckLength = this.deckInPlay.countCards();
     let numIncorrect = this.incorrectGuesses.length;
     let numCorrect = deckLength - numIncorrect;
@@ -35,7 +34,12 @@ class Round {
   }
 
   endRound() {
-    this.isOver = true;
+    let deckLength = this.deckInPlay.countCards();
+    let turnsNum = this.turnCount;
+    let cardsToPlay = deckLength - turnsNum;
+    if (!cardsToPlay) {
+      this.isOver = true;
+    }
   }
 }
 
