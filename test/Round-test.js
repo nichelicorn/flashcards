@@ -68,7 +68,7 @@ describe('Round class', () => {
   })
 
   describe('A method to record the steps for each turn', () => { // describes Round.takeTurn
-    it('should create a new Turn instance', () => {
+    it('should create a new Turn instance', () => { // refactor this?! Round should have a property this.currentTurn;
       round.takeTurn('14');
       expect(turn1).to.be.an.instanceof(Turn);
     })

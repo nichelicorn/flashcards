@@ -8,7 +8,7 @@ const Round = require('../src/Round');
 const Turn = require('../src/Turn');
 
 describe('Game class', () => {
-  let card1, card2, card3, deck, round, game, turn1, turn2, turn3;
+  let card1, card2, card3, deck, round, game;
 
   beforeEach(() => {
     card1 = {
@@ -30,12 +30,28 @@ describe('Game class', () => {
       "correctAnswer": "true"
     };
     deck = new Deck([card1, card2, card3]);
-    turn1 = new Turn('14', card1);
-    turn2 = new Turn('Yoda', card2);
-    turn3 = new Turn('true', card3);
     round = new Round(deck);
     game = new Game();
   })
 
+  it.skip('should instantiate a new Game', () => {
+    expect(game).to.be.an.instanceof(Game);
+  })
+
+
+  describe('A method to start the game', () => { // describes Game.start
+    it.skip('should have a method to start the game', () => {
+      expect(game.start).to.be.a('function');
+    })
+
+    it.skip('should keep track of the current round', () => {
+      expect(game.currentRound).to.deep.equal(round);
+    })
+
+    it.skip('should create Cards for the deck', () => {
+      expect(game.currentRound.deckInPlay).to.deep.equal(deck);
+    })
+
+  })
 
 })
