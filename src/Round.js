@@ -17,12 +17,10 @@ class Round {
     let currentTurn = new Turn(guess, this.returnCurrentCard());
     this.turnCount++;
     currentTurn.evaluateGuess();
-    // console.log('currentTurn <>>>', currentTurn);
     if(!currentTurn.guessIsCorrect) {
       this.incorrectGuesses.push(currentTurn.currentCard.id);
     }
     return currentTurn.giveFeedback();
-    // console.log('evaluate <>>>', currentTurn);
   }
 
   calculateScore() {
@@ -45,11 +43,3 @@ class Round {
 }
 
 module.exports = Round;
-
-
-// Round
-//
-// Your Round class will be the object that:
-  // takes in responses
-  // records these guesses
-  // (as well as if they are correct or incorrect).
