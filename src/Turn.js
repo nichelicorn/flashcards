@@ -16,16 +16,19 @@ class Turn {
   evaluateGuess() {
     if (this.userGuess === this.currentCard.correctAnswer) {
       this.guessIsCorrect = true;
+      // return this.guessIsCorrect;
     } else {
       this.guessIsCorrect = false;
+      // return this.guessIsCorrect;
     }
+    return this.guessIsCorrect;
     // console.log('the guess is :', this.guessIsCorrect);
   }
 
   giveFeedback() {
     if (this.guessIsCorrect) {
       return 'You are correct!';
-    } else if (!this.guessIsCorrect) {
+    } else {
       return 'That was not correct. You can try again in the next round!';
     }
   }
