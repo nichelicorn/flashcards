@@ -33,6 +33,10 @@ class Round {
     this.percentCorrect = Math.ceil((numCorrect / deckLength) * 100);
     return this.percentCorrect;
   }
+
+  endRound() {
+    this.isOver = true;
+  }
 }
 
 module.exports = Round;

@@ -131,11 +131,12 @@ describe('Round class', () => {
   })
 
   describe('A method to alert a player when the game is over', () => { // describes Round.endRound
-    it.skip('should end the round when all cards have been played', () => {
+    it('should end the round when all cards have been played', () => {
       round.takeTurn('14');
       round.takeTurn('Yoda');
       round.takeTurn('true');
       round.calculateScore();
+      round.endRound();
 
       expect(round.isOver).to.equal(true);
     })
