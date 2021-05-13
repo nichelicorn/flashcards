@@ -7,27 +7,9 @@ const Game = require('../src/Game');
 const Round = require('../src/Round');
 
 describe('Game class', () => {
-  let card1, card2, card3, game;
+  let game;
 
   beforeEach(() => {
-    card1 = {
-      "id": 1,
-      "question": "At what age did Ahsoka Tano become a Jedi Padawan?",
-      "answers": ["12", "14", "17"],
-      "correctAnswer": "14"
-    };
-    card2 = {
-      "id": 2,
-      "question": "Who was Ahsoka's teacher?",
-      "answers": ["Yoda", "Plo Koon", "Anakin Skywalker"],
-      "correctAnswer": "Anakin Skywalker"
-    };
-    card3 = {
-      "id": 3,
-      "question": "Did Ahsoka fight with Darth Maul on Mandalore?",
-      "answers": ["true", "false"],
-      "correctAnswer": "true"
-    };
     game = new Game();
   })
 
