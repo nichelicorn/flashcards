@@ -2,7 +2,8 @@
 A flash card game to play in your terminal! This game will help you brush up on your `array.prototype.method()` knowledge 🧠
 
 ## The working application
-<img src="./images/flashcards.gif" width=400 />
+![giphy-2](https://user-images.githubusercontent.com/63027000/118208504-1fc8ae80-b424-11eb-8709-76da967877f8.gif)
+
 
 ## Install/Setup instructions
 * To play FlashCards, clone this repo by clicking the `⬇ Code` button, and choosing your clone path.
@@ -33,6 +34,6 @@ The first question will appear with a list of possible answers. The user selects
         <td>Functionality</td>
     </tr>
     </tr>
-        <td><img src="./images/jsLogo.png" alt="javascript" width="100" height="auto" /></td>
+        <td><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F99%2FUnofficial_JavaScript_logo_2.svg%2F1200px-Unofficial_JavaScript_logo_2.svg.png&f=1&nofb=1" alt="The JavaScript logo, a yellow square with the uppercase letters JS in the lower right third" width="100" height="auto" /></td>
     </tr>
 </table>
