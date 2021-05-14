@@ -1,29 +1,15 @@
 const chai = require('chai');
 const expect = chai.expect;
 
+const Card = require('../src/Card');
 const Turn = require('../src/Turn');
 
 describe('Turn class', () => {
   let card1, card2, card3, turn1, turn2, turn3;
   beforeEach(() => {
-    card1 = {
-      "id": 1,
-      "question": "At what age did Ahsoka Tano become a Jedi Padawan?",
-      "answers": ["12", "14", "17"],
-      "correctAnswer": "14"
-    };
-    card2 = {
-      "id": 2,
-      "question": "Who was Ahsoka's teacher?",
-      "answers": ["Yoda", "Plo Koon", "Anakin Skywalker"],
-      "correctAnswer": "Anakin Skywalker"
-    };
-    card3 = {
-      "id": 3,
-      "question": "Did Ahsoka fight with Darth Maul on Mandalore?",
-      "answers": ["true", "false"],
-      "correctAnswer": "true"
-    };
+    card1 = new Card( 1, "At what age did Ahsoka Tano become a Jedi Padawan?", ["12", "14", "17"], "14" );
+    card2 = new Card( 2, "Who was Ahsoka's teacher?", ["Yoda", "Plo Koon", "Anakin Skywalker"], "Anakin Skywalker" );
+    card3 = new Card( 3, "Did Ahsoka fight with Darth Maul on Mandalore?", ["true", "false"], "true" );
     turn1 = new Turn('14', card1);
     turn2 = new Turn('Yoda', card2);
     turn3 = new Turn('true', card3);
@@ -42,14 +28,14 @@ describe('Turn class', () => {
       expect(turn3.currentCard['correctAnswer']).to.equal('true'); // test that the object can be read using bracket notation
     })
 
-    // it('should not start the turn if it is missing a guess', () => { // not sure how to write this test yet...
+    // it('should not start the turn if it is missing a guess', () => {
     //   let turn4 = new Turn( , card1);
-    //   expect()
+    //   expect() ... // not sure how to write this test yet...
     // })
 
-    // it('should not start the turn if it is missing a card', () => { // not sure how to write this test yet...
+    // it('should not start the turn if it is missing a card', () => {
     //   let turn5 = new Turn('Anakin Skywalker', );
-    //   expect()
+    //   expect() ... // not sure how to write this test yet...
     // })
   })
 
