@@ -34,7 +34,7 @@ class Round {
 
   endRound() {
     console.log(`** Round over! ** You answered ${this.calculateScore()}% of the questions correctly!`);
-    // let deckLength = this.deckInPlay.countCards();
+    // let deckLength = this.deckInPlay.countCards(); // 🔮 this setup will be used in a future iteration - a new Round will begin with the cards in [this.incorrectGuesses]
     // let turnsNum = this.turnCount;
     // let cardsToPlay = deckLength - turnsNum;
     // if (!cardsToPlay) {
