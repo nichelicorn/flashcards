@@ -1,7 +1,7 @@
 const chai = require('Chai');
 const expect = chai.expect;
 
-// const Card = require('../src/Card');
+const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const Turn = require('../src/Turn');
 const Round = require('../src/Round');
@@ -10,25 +10,10 @@ describe('Round class', () => {
   let card1, card2, card3, deck, turn1, round;
 
   beforeEach(() => {
-    card1 = {
-      "id": 1,
-      "question": "At what age did Ahsoka Tano become a Jedi Padawan?",
-      "answers": ["12", "14", "17"],
-      "correctAnswer": "14"
-    };
-    card2 = {
-      "id": 2,
-      "question": "Who was Ahsoka's teacher?",
-      "answers": ["Yoda", "Plo Koon", "Anakin Skywalker"],
-      "correctAnswer": "Anakin Skywalker"
-    };
-    card3 = {
-      "id": 3,
-      "question": "Did Ahsoka fight with Darth Maul on Mandalore?",
-      "answers": ["true", "false"],
-      "correctAnswer": "true"
-    };
-    deck = new Deck([card1, card2, card3]);
+    card1 = new Card( 1, "At what age did Ahsoka Tano become a Jedi Padawan?", ["12", "14", "17"], "14" );
+    card2 = new Card( 2, "Who was Ahsoka's teacher?", ["Yoda", "Plo Koon", "Anakin Skywalker"], "Anakin Skywalker" );
+    card3 = new Card( 3, "Did Ahsoka fight with Darth Maul on Mandalore?", ["true", "false"], "true" );
+    deck = new Deck([ card1, card2, card3 ]);
     turn1 = new Turn('14', card1);
     round = new Round(deck);
   })
@@ -66,7 +51,7 @@ describe('Round class', () => {
   })
 
   describe('A method to record the steps for each turn', () => { // describes Round.takeTurn
-    it('should create a new Turn instance', () => { // refactor this?! Round should have a property this.currentTurn;
+    it('should create a new Turn instance', () => {
       round.takeTurn('14');
       expect(turn1).to.be.an.instanceof(Turn);
     })

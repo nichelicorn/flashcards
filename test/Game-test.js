@@ -61,7 +61,7 @@ describe('Game class', () => {
     })
 
     it.skip('should invoke the method printQuestion', () => {
-      // 🚨 DO NOT TEST `printMessage` or `printQuestion` - these are outside the scope of this project
+      // 🔮 add `expect`ation here
     })
   })
 })
