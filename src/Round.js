@@ -14,13 +14,11 @@ class Round {
   }
 
   takeTurn(guess) {
-    // let currentCard = this.returnCurrentCard();
-    // let currentTurn = new Turn(guess, currentCard);
-    // console.log(currentCard);
-    let currentTurn = new Turn(guess, this.returnCurrentCard());
+    let currentCard = this.returnCurrentCard();
+    let currentTurn = new Turn(guess, currentCard);
     this.turnCount++;
     currentTurn.evaluateGuess();
-    if(!currentTurn.guessIsCorrect) {
+    if (!currentTurn.guessIsCorrect) {
       this.incorrectGuesses.push(currentTurn.currentCard.id);
     }
     return currentTurn.giveFeedback();
@@ -35,13 +33,14 @@ class Round {
   }
 
   endRound() {
-    let deckLength = this.deckInPlay.countCards();
-    let turnsNum = this.turnCount;
-    let cardsToPlay = deckLength - turnsNum;
-    if (!cardsToPlay) {
-      this.isOver = true;
-    }
-    return `** Round over! ** You answered ${this.calculateScore()}% of the questions correctly!`
+    console.log(`** Round over! ** You answered ${this.calculateScore()}% of the questions correctly!`);
+    // let deckLength = this.deckInPlay.countCards();
+    // let turnsNum = this.turnCount;
+    // let cardsToPlay = deckLength - turnsNum;
+    // if (!cardsToPlay) {
+    //   this.isOver = true;
+    // }
+    return `** Round over! ** You answered ${this.calculateScore()}% of the questions correctly!`;
   }
 }
 

@@ -27,9 +27,9 @@ class Turn {
 
   giveFeedback() {
     if (this.guessIsCorrect) {
-      return 'You are correct!';
+      return 'correct! 🎉';
     } else {
-      return 'That was not correct. You can try again in the next round!';
+      return 'not correct. 🌚 You can try again in the next round!';
     }
   }
 }

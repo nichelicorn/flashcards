@@ -1,13 +1,13 @@
 const chai = require('Chai');
 const expect = chai.expect;
 
-const Card = require('../src/Card');
+// const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 const Turn = require('../src/Turn');
 const Round = require('../src/Round');
 
 describe('Round class', () => {
-  let card1, card2, card3, deck1, turn1, turn2, turn3, round;
+  let card1, card2, card3, deck, turn1, round;
 
   beforeEach(() => {
     card1 = {
@@ -30,8 +30,6 @@ describe('Round class', () => {
     };
     deck = new Deck([card1, card2, card3]);
     turn1 = new Turn('14', card1);
-    turn2 = new Turn('Yoda', card2);
-    turn3 = new Turn('true', card3);
     round = new Round(deck);
   })
 
@@ -109,13 +107,13 @@ describe('Round class', () => {
 
     it('should tell the player if their answer is correct', () => { // invoke Turn.giveFeedback
 
-      expect(round.takeTurn('14')).to.equal('You are correct!');
+      expect(round.takeTurn('14')).to.equal('correct! 🎉');
     })
 
     it('should tell the player if their answer is incorrect', () => {
       round.takeTurn('14');
 
-      expect(round.takeTurn('Yoda')).to.equal('That was not correct. You can try again in the next round!');
+      expect(round.takeTurn('Yoda')).to.equal('not correct. 🌚 You can try again in the next round!');
     })
   })
 
@@ -131,7 +129,7 @@ describe('Round class', () => {
   })
 
   describe('A method to alert a player when the game is over', () => { // describes Round.endRound
-    it('should end the round when all cards have been played', () => {
+    it.skip('should end the round when all cards have been played', () => {
       round.takeTurn('14');
       round.takeTurn('Yoda');
       round.takeTurn('true');
