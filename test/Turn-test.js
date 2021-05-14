@@ -30,12 +30,12 @@ describe('Turn class', () => {
 
     // it('should not start the turn if it is missing a guess', () => {
     //   let turn4 = new Turn( , card1);
-    //   expect() ... // not sure how to write this test yet...
+    //   expect() ... // 🔮 will include in a future iteration
     // })
 
     // it('should not start the turn if it is missing a card', () => {
     //   let turn5 = new Turn('Anakin Skywalker', );
-    //   expect() ... // not sure how to write this test yet...
+    //   expect() ... // 🔮 will include in a future iteration
     // })
   })
 
