@@ -13,6 +13,10 @@ A flash card game to play in your terminal! This game will help you brush up on 
 ## How to play the game
 The first question will appear with a list of possible answers. The user selects an answer by inputting a number on the keyboard 1️⃣ 2️⃣ 3️⃣, or by using the up ⬆️ and down ⬇️ arrow keys and keying "enter" ⏎ when the desired answer is highlighted. A message will let the user know if their guess was correct, and by entering again the next question will appear in the console. Once all of the questions have been answered, the game will end, and a score will be displayed in the console. To exit the game, key `ctrl` and `c`.
 
+## 🔮 Future Iterations
+* Update testing suite with sad path testing
+* Create testing and methods to play additional rounds. This will utilize the array `Round.incorrectGuesses` and allow the user to play through the flash cards that were not answered correctly on previous rounds
+
 ## Author
 <table>
     <tr>
