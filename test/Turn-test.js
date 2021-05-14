@@ -47,7 +47,7 @@ describe('Turn class', () => {
     })
   })
 
-  describe('A method to return the card in play', () => {
+  describe('A method to return the card in play', () => { // describes Turn.returnCurrentCard
     it('should return the current card', () => {
       expect(turn1.returnCard()).to.deep.equal(card1);
       expect(turn2.returnCard()).to.deep.equal(card2);
@@ -55,7 +55,7 @@ describe('Turn class', () => {
     })
   })
 
-  describe('A method to evaluate the player\'s guess', () => {
+  describe('A method to evaluate the player\'s guess', () => { // describes Turn.evaluateGuess
     it('should return true if the player\'s guess is correct', () => {
       turn1.evaluateGuess();
       turn3.evaluateGuess();
@@ -71,7 +71,7 @@ describe('Turn class', () => {
     })
   })
 
-  describe('A method to return feedback to the player', () => {
+  describe('A method to return feedback to the player', () => { // describes Turn.giveFeedback
     it('should return a message if the player\'s guess is correct', () => {
       turn1.evaluateGuess();
       turn3.evaluateGuess();
